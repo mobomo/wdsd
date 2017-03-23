@@ -1,0 +1,61 @@
+/* Navigation Bar Background Color */
+.usa-header {
+    background-color: #fefefd;
+}
+
+/* Logo text link color */
+.usa-logo .usa-logo-text a {
+    color: #212121;
+}
+
+/* Navigation Links - Main Menu color */
+.usa-nav-primary button, .usa-nav-primary > li > a {
+    color: #5b616b;
+}
+
+/* Secondary Links and Search form label color */
+.usa-nav-secondary-links a, .usa-nav-secondary-links .usa-header-search-button {
+    color: #5b616b;
+}
+
+/* Navigation Main Menu Background Color */
+.usa-nav {
+    background-color: #fefefe;
+}
+
+/* Tagline Heading */
+#main-content .usa-section .usa-width-one-third h2 {
+    color: #000;
+}
+
+/* Tagline Body */
+#main-content .usa-section .usa-width-two-thirds p {
+    color: #292929;
+}
+/* Graphic List */
+.usa-section-dark {
+    background-color: #112e51;
+}
+.usa-section-dark p {
+    color: #ffffff;
+}
+/* Usa Section dark headings */
+.usa-section-dark h1, .usa-section-dark h2, .usa-section-dark h3, .usa-section-dark h4, .usa-section-dark h5, .usa-section-dark h6 {
+    color: #02bfe7;
+}
+/* Usa Footer Primary Background */
+.usa-footer-primary-section {
+    background-color: #f1f1f1;
+}
+/* Usa Footer Primary Links */
+.usa-footer .usa-footer-primary-link {
+  color: #212120;
+}
+/* Usa Footer Secondary Background */
+.usa-footer-secondary_section {
+    background-color: #d6d7d9;
+}
+
+
+
+

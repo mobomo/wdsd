@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+#admin-menu, #admin-menu .dropdown {z-index:99999;}
+.tabs.primary li {
+    display: inline;
+    float: left;
+    margin-right: 1em;
+}
+.tabs.primary {
+    display: block;
+    float: left;
+}
+#palette .form-item {
+    width: 26em;
+}
+#palette .lock {
+    width: 15px;
+    height: 25px;
+    background: url(images/lock.png) no-repeat 50% 2px;
+    cursor: pointer;
+}
+#palette .form-item label {
+    line-height: 1;
+    width: 15em;
+}
+/* We rewrite headings and p font family with theme settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Merriweather"; /*setting:headers*/
+}
+html p, html p.usa-font-lead {
+  font-family:"Source Sans Pro"; /*setting:body*/
+}

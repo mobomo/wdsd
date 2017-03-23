@@ -1,0 +1,93 @@
+; Theme Info -----------------------------------------------------------------
+; required information about the theme
+
+name        = U.S. Web Design Standards Drupal
+description = Built to use the U.S. Web Design Standards, a library of UI components for U.S. government websites.
+screenshot  = screenshot.png
+core        = 7.x
+version     = "7.x-1.0"
+engine      = phptemplate
+
+; Dependencies
+dependencies[] = style_settings
+
+; remove some of the system (core) CSS files
+; we can always add these back in as we need them
+stylesheets[all][] = system.admin.css
+stylesheets[all][] = system.maintenance.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+
+; remove some core module files
+; we can always add these back in as we need them
+stylesheets[all][] = aggregator.css
+stylesheets[all][] = block.css
+stylesheets[all][] = book.css
+stylesheets[all][] = color.css
+stylesheets[all][] = comment.css
+stylesheets[all][] = dashboard.css
+stylesheets[all][] = dblog.css
+stylesheets[all][] = field.css
+stylesheets[all][] = field_ui.css
+stylesheets[all][] = file.css
+stylesheets[all][] = filter.css
+stylesheets[all][] = forum.css
+stylesheets[all][] = help.css
+stylesheets[all][] = image.admin.css
+stylesheets[all][] = image.css
+stylesheets[all][] = locale.css
+stylesheets[all][] = menu.css
+stylesheets[all][] = node.css
+stylesheets[all][] = openid.css
+stylesheets[all][] = poll.css
+stylesheets[all][] = profile.css
+stylesheets[all][] = search.css
+stylesheets[all][] = shortcut.admin.css
+stylesheets[all][] = simpletest.css
+stylesheets[all][] = taxonomy.css
+stylesheets[all][] = tracker.css
+stylesheets[all][] = update.css
+stylesheets[all][] = user.css
+
+; add our own CSS files from the standards folder
+;stylesheets[all][] = assets.old/css/google-fonts.css
+;stylesheets[all][] = assets.old/css/main.css
+stylesheets[all][] = assets/css/uswds.css
+
+; our custom styles come in after the standards styles for cascading reasons
+stylesheets[all][] = css/style.css
+
+; we may need to remove jquery here and recommend jquery_update module to users
+;commenting out old scripts
+scripts[] = js/libs/jquery.pjax.min.js
+scripts[] = js/libs/jquery.velocity.min.js
+scripts[] = js/drubath.global.js
+;scripts[] = assets.old/js/vendor/jquery-1.11.3.min.js
+;scripts[] = assets.old/js/components.js
+;scripts[] = assets.old/js/vendor/rem.min.js
+scripts[] = assets/js/uswds.min.js
+
+
+; some default regions for now
+regions[header] = Header
+regions[search] = Search
+regions[navigation] = Navigation bar
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[primaryfooter] = Primary Footer
+regions[secondfooter] = Secondary Footer
+regions[bottom] = Bottom
+
+; Add our stylesheet for the Color module to override.
+stylesheets[all][] = css/colors.css
+
+; Options --------------------------------------------------------------------
+; initialise with default values the custom Theme Settings to avoid errors.
+settings[footer] = medium
+settings[landing] = extended
+settings[documentation] = basic
+settings[page] = basic
