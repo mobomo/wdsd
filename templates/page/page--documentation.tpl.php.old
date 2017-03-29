@@ -67,7 +67,7 @@
  * - $page['navigation']: Items for the featured region.
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
- * - $page['simple_toc']: Items for the first sidebar.
+ * - $page['sidebar_first']: Items for the first sidebar.
  * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['footer']: Items for the footer region.
  * - $page['bottom']: Items for the bottom region.
@@ -159,10 +159,10 @@
             <ul class="action-links"><?php print render($action_links); ?></ul>
           <?php endif; ?>
           <main id="main-content" class="usa-grid usa-section usa-content usa-layout-docs">
-              <?php if ($page['simple_toc'] || $page['sidebar_second']): ?>
+              <?php if ($page['sidebar_first'] || $page['sidebar_second']): ?>
                 <aside class="usa-width-one-fourth usa-layout-docs-sidenav">
 
-                  <?php print render($page['simple_toc']); ?>
+                  <?php print render($page['sidebar_first']); ?>
 
                   <?php print render($page['sidebar_second']); ?>
                 </aside>

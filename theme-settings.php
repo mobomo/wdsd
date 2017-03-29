@@ -18,8 +18,8 @@ function wdsd_form_system_theme_settings_alter(&$form, &$form_state) {
 
   //We define the font family options. We need to match the font-family aliases in css!
   $fontfamily = array(
-    'Merriweather' => t('Merriweather'),
     'Source Sans Pro' => t('Source Sans Pro'),
+    'Merriweather' => t('Merriweather'),
   );
 
   $form['typefaces']['headers'] = array(
@@ -33,11 +33,29 @@ function wdsd_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['typefaces']['paragraph'] = array(
     '#type' => 'select',
-    '#title' => t('Body'),
-    '#description' => t('Font Family to use in body'),
+    '#title' => t('Paragraphs'),
+    '#description' => t('Font Family to use in p tags'),
     '#options' => $fontfamily,
     // Besides hex color value also color names are accepted.
     '#default_value' => theme_get_setting('paragraph'),
+  );
+
+  $form['typefaces']['headerlogo'] = array(
+    '#type' => 'select',
+    '#title' => t('Logo Font'),
+    '#description' => t('Font Family for Logo in Header'),
+    '#options' => $fontfamily,
+    // Besides hex color value also color names are accepted.
+    '#default_value' => theme_get_setting('headerlogo'),
+  );
+
+  $form['typefaces']['defont'] = array(
+    '#type' => 'select',
+    '#title' => t('Default'),
+    '#description' => t('Font Family for all elements in html not listed above'),
+    '#options' => $fontfamily,
+    // Besides hex color value also color names are accepted.
+    '#default_value' => theme_get_setting('defont'),
   );
 
   // Custom options heading.

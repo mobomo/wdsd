@@ -81,15 +81,16 @@
 
 
 <?php else: ?>
-
-  <?php
-    // We hide the comments, tags and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    hide($content['field_tags']);
-    print render($content);
-  ?>
-
+  <section class="usa-grid">
+    <h1><?php print($title);?></h1>
+    <?php
+      // We hide the comments, tags and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
+      print render($content);
+    ?>
+  </section>
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
 
     <?php print render($content['field_tags']); ?>

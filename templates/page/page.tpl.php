@@ -67,7 +67,7 @@
  * - $page['navigation']: Items for the featured region.
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
- * - $page['simple_toc']: Items for the first sidebar.
+ * - $page['sidebar_first']: Items for the first sidebar.
  * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['footer']: Items for the footer region.
  * - $page['bottom']: Items for the bottom region.
@@ -196,9 +196,9 @@ if (isset($variables['footer_secondary']) && theme_get_setting('footer') == 'big
   <div class="usa-overlay"></div>
 
   <main id="main-content"<?php if ($nodetype == 'documentation'):?> class="usa-grid usa-section usa-content usa-layout-docs"<?php endif;?>>
-      <?php if ($page['simple_toc'] || $page['sidebar_second']): ?>
+      <?php if ($page['sidebar_first'] || $page['sidebar_second']): ?>
         <aside class="usa-width-one-fourth usa-layout-docs-sidenav">
-          <?php print render($page['simple_toc']); ?>
+          <?php print render($page['sidebar_first']); ?>
           <?php print render($page['sidebar_second']); ?>
         </aside>
       <?php endif; ?>

@@ -1,0 +1,9 @@
+#palette .form-item {
+    width: 26em;
+}
+#palette .lock {
+  position: unset;
+}
+#palette .form-item label {
+    width: 15em;
+}

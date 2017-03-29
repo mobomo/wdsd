@@ -108,6 +108,8 @@ function wdsd_preprocess_page(&$variables) {
     }
     $headers = theme_get_setting('headers');
     $paragraph = theme_get_setting('paragraph');
+    $logo = theme_get_setting('headerlogo');
+    $defont = theme_get_setting('defont');
 }
 
 /**

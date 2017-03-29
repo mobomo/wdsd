@@ -78,7 +78,7 @@
 ?>
 <?php if ($view_mode == 'teaser'): ?>
 
-<?php print render($content['body']);?>
+  <?php print render($content['body']);?>
 
 <?php else: ?>
 

@@ -33,5 +33,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family:"Merriweather"; /*setting:headers*/
 }
 html p, html p.usa-font-lead {
-  font-family:"Source Sans Pro"; /*setting:body*/
+  font-family:"Source Sans Pro"; /*setting:paragraph*/
+}
+.usa-logo .usa-logo-text a {
+  font-family:"Source Sans Pro"; /*setting:headerlogo*/
+}
+html, button, .usa-button, #main-menu li a, #main-menu li button {
+  font-family:"Source Sans Pro"; /*setting:defont*/
 }
