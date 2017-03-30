@@ -82,7 +82,6 @@
 
 <?php else: ?>
   <?php
-//     dpm($variables);
     $herobackgrnd = '';
     $herobackgrnd = $variables['hero_background'];
   ?>

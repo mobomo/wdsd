@@ -1,40 +1,4 @@
 <?php
-
-/*
- * Initialize theme settings
- */
-// if (is_null(theme_get_setting('landing'))) {  // <-- change this line
-//   global $theme_key;
-//
-//
-//   /*
-//    * The default values for the theme variables. Make sure $defaults exactly
-//    * matches the $defaults in the theme-settings.php file.
-//    */
-//   $defaults = array(             // <-- change this array
-//     'landing' => 'extended',
-//   );
-//
-//   // Get default theme settings.
-//   $settings = theme_get_settings($theme_key);
-//
-//   // Don't save the toggle_node_info_ variables.
-//   if (module_exists('node')) {
-//     // NOTE: node_get_types() is renamed to node_type_get_types() in Drupal 7
-//     foreach (node_type_get_types() as $type => $name) {
-//       unset($settings['toggle_node_info_' . $type]);
-//     }
-//   }
-//   // Save default theme settings.
-//   variable_set(
-//     str_replace('/', '_', 'theme_'. $theme_key .'_settings'),
-//     array_merge($defaults, $settings)
-//   );
-//   // Force refresh of Drupal internals.
-//   theme_get_setting('', TRUE);
-// }
-
-
 /**
  *
  * Implements hook_preprocess_html().
@@ -106,6 +70,7 @@ function wdsd_preprocess_page(&$variables) {
 
       }
     }
+    //init default theme settings
     $headers = theme_get_setting('headers');
     $paragraph = theme_get_setting('paragraph');
     $logo = theme_get_setting('headerlogo');
@@ -134,7 +99,6 @@ function wdsd_preprocess_node(&$variables) {
 
 function wdsd_field__field_graphic_list ($variables) {
   $output = '';
-  // dpm (count($variables ['items']));
   $countitems = '';
   $countitems = count($variables ['items']);
   // Render the items.
