@@ -116,11 +116,31 @@ function wdsd_field__field_graphic_list ($variables) {
 
   return $output;
 }
+
+function wdsd_preprocess_field(&$variables) {
+
+  if ($variables['element']['#field_name'] == 'field_icon') {
+
+    foreach($variables['items'] as $key => $item){
+      $variables['items'][ $key ]['#item']['attributes']['class'][] = 'usa-banner-icon usa-media_block-img';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ * Remove Height and Width Inline Styles
+ */
+function wdsd_preprocess_image(&$variables) {
+  foreach (array('width', 'height') as $key) {
+    unset($variables[$key]);
+  }
+}
 /**
 * Changes the search form to use the "search" input element of HTML5.
 */
-function wdsd_preprocess_search_block_form(&$vars) {
-  $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
+function wdsd_preprocess_search_block_form(&$variables) {
+  $variables['search_form'] = str_replace('type="text"', 'type="search"', $variables['search_form']);
 }
 /**
  * Implements hook_form_form_ID_alter()
@@ -215,10 +235,12 @@ function wdsd_menu_link__menu_block__2($variables) {
   if ($element['#below']) {
       $sub_menu = drupal_render($element['#below']);
       $parentTitle = $element['#title'];
-      // classes and ids replacement. Yeah, crappy and nasty :(
+
+      // classes and ids replacement. Yeah, crappy and nasty. Sorry :(
       $pmlid = $element['#original_link']['mlid'];
       $sub_menu = str_replace('usa-nav-primary usa-accordion', 'usa-nav-submenu', $sub_menu);
       $sub_menu = str_replace('parent-menu-', 'sidenav-' . $pmlid, $sub_menu);
+
       // parent item button attributes
       $element['#localized_options']['attributes']['aria-controls'] = 'sidenav-' . $pmlid;
       $element['#localized_options']['attributes']['aria-expanded'] = 'false';
@@ -248,19 +270,19 @@ function wdsd_menu_link__menu_block__2($variables) {
 // }
 
 /**
-* Implements hook_links__system_main_menu().
-*/
+ * Implements hook_links__system_main_menu().
+ */
 function wdsd_links__system_main_menu($variables) {
   // Get the active trail
   $menu_active_trail = menu_get_active_trail();
-  // Initialise our custom trail.
+  // Init our custom trail.
   $active_trail = array();
 
   // UL classes
   $class = implode($variables['attributes']['class'], ' ');
   $html = '<ul class="' . $class . '" id="' . $variables['attributes']['id'] . '">';
 
-  // Iterate links to build menu.
+  // Loop links to build the menu.
   foreach ($variables['links'] as $key => $link) {
 
     // Check this is a link not a property.
@@ -269,7 +291,7 @@ function wdsd_links__system_main_menu($variables) {
 
       $link_title = $link['#title'];
 
-        // Check if we have a submenu and depth is 1.
+      // Check if we have a submenu and depth is 1.
       if ($link['#below'] && $link['#original_link']['depth'] == 1) {
           $pmlid = '';
           $pmlid = $link['#original_link']['mlid'];
@@ -294,6 +316,10 @@ function wdsd_links__system_main_menu($variables) {
   return $html;
 }
 
+/**
+ * Implements theme_menu_item_link().
+ * Code from: https://www.drupal.org/docs/7/working-with-menus/named-anchors-in-menus
+ */
 function wdsd_menu_item_link($item, $link_item) {
   // Convert anchors in path to proper fragment
   $path = explode('#', $link_item['path'], 2);
@@ -309,13 +335,22 @@ function wdsd_menu_item_link($item, $link_item) {
             FALSE
           );
 }
+
+/**
+ * Override or insert variables into the page template for HTML output.
+ */
 function wdsd_process_html(&$variables) {
+ // Hook into color.module.
  if (module_exists('color')) {
  _color_html_alter($variables);
  }
 }
 
+/**
+ * Override or insert variables into the page template.
+ */
 function wdsd_process_page(&$variables, $hook) {
+ // Hook into color.module
  if (module_exists('color')) {
  _color_page_alter($variables);
  }
