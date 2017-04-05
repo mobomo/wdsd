@@ -30,6 +30,12 @@ html {
 }
 
 /* fix for long logo text - vero 03/04/2017 */
+
+/*mariana fix for #NT-31*/
+.node-type-documentation .usa-logo {
+  max-width: 100%;
+}
+/**/
 .usa-logo{
 max-width: 55%;
 bottom:auto;
@@ -54,6 +60,11 @@ overflow: hidden;
 }
 
 @media screen and (min-width: 951px){
+/*mariana fix for #NT-31*/
+.node-type-documentation .usa-header-basic .usa-navbar {
+  width: 26%;
+}
+/**/
 .usa-header-basic .usa-navbar{
     width: 44%;
     position: absolute;
