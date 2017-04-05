@@ -1,0 +1,39 @@
+/* We rewrite headings and p font family with theme settings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Merriweather"; /*setting:headers*/
+}
+html p, html p.usa-font-lead {
+  font-family:"Source Sans Pro"; /*setting:paragraph*/
+}
+.usa-logo .usa-logo-text a {
+  font-family:"Source Sans Pro"; /*setting:headerlogo*/
+}
+#main-menu li a, #main-menu li button, .usa-nav-secondary, .usa-header-search-button {
+  font-family:"Source Sans Pro"; /*setting:menu_items*/
+}
+html, button, .usa-button {
+  font-family:"Source Sans Pro"; /*setting:defont*/
+}
+
+#main-menu li a, #main-menu li button, .usa-nav-secondary, .usa-header-search-button {
+  font-family:"Source Sans Pro"; /*setting:menu_items*/
+}
+
+.usa-hero-callout {
+  background-color: #112e51; /*setting:hero_background_colour*/
+}
+.usa-hero-callout h2{
+  color: #02bfe7; /*setting:hero_heading_colour*/
+}
+.usa-hero-callout-alt {
+  color: #ffffff; /*setting:hero_title_colour*/
+}
+.usa-hero-link {
+  color: #02bfe7; /*setting:hero_link_colour*/
+}
+.usa-hero .usa-button {
+  color: #ffffff; /*setting:hero_button_colour*/
+  background-color: #e31c3d; /*setting:hero_button_bg_colour*/
+}
+

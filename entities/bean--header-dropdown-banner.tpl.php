@@ -7,4 +7,6 @@
   </button>
   </div>
 </header>
-<?php print render($content['field_banner_items']);?>
+<div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
+  <?php print render($content['field_banner_items']);?>
+</div>

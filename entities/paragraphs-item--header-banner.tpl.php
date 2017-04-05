@@ -27,15 +27,13 @@
  * @see template_process()
  */
 ?>
-
-<div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
   <div class="usa-banner-guidance usa-width-one-half">
     <?php print render($content['field_icon']); ?>
     <div class="usa-media_block-body">
       <?php print render($content['field_body']); ?>
     </div>
   </div>
-</div>
+
 
 
 

@@ -18,6 +18,11 @@
     color: #5b616b;
 }
 
+/* Search Button Background */
+#search-block-form [type="submit"] {
+    background-color: #0071bc;
+}
+
 /* Navigation Main Menu Background Color */
 .usa-nav {
     background-color: #fefefe;
@@ -33,14 +38,14 @@
     color: #292929;
 }
 /* Graphic List */
-.usa-section-dark {
+.usa-graphic_list{
     background-color: #112e51;
 }
-.usa-section-dark p {
+.usa-graphic_list p {
     color: #ffffff;
 }
 /* Usa Section dark headings */
-.usa-section-dark h1, .usa-section-dark h2, .usa-section-dark h3, .usa-section-dark h4, .usa-section-dark h5, .usa-section-dark h6 {
+.usa-graphic_list h1, .usa-graphic_list h2, .usa-graphic_list h3, .usa-graphic_list h4, .usa-graphic_list h5, .usa-graphic_list h6 {
     color: #02bfe7;
 }
 /* Usa Footer Primary Background */

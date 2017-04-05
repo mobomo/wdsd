@@ -74,7 +74,15 @@ function wdsd_preprocess_page(&$variables) {
     $headers = theme_get_setting('headers');
     $paragraph = theme_get_setting('paragraph');
     $logo = theme_get_setting('headerlogo');
+    $menu_items = theme_get_setting('menu_items');
     $defont = theme_get_setting('defont');
+
+    $hero_background_colour = theme_get_setting('hero_background_colour');
+    $hero_title_colour = theme_get_setting('hero_title_colour');
+    $hero_heading_colour = theme_get_setting('hero_heading_colour');
+    $hero_link_colour = theme_get_setting('hero_link_colour');
+    $hero_button_bg_colour = theme_get_setting('hero_button_bg_colour');
+    $hero_button_colour = theme_get_setting('hero_button_colour');
 }
 
 /**

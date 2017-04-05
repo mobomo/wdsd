@@ -28,16 +28,47 @@ html {
     line-height: 1;
     width: 15em;
 }
-/* We rewrite headings and p font family with theme settings */
-h1, h2, h3, h4, h5, h6 {
-  font-family:"Merriweather"; /*setting:headers*/
+
+/* fix for long logo text - vero 03/04/2017 */
+.usa-logo{
+max-width: 55%;
+bottom:auto;
 }
-html p, html p.usa-font-lead {
-  font-family:"Source Sans Pro"; /*setting:paragraph*/
+
+@media (max-width: 950px){
+.usa-logo{
+max-width: calc(100% - 90px);
+line-height: 1em;
+display: table;
+height: 40px;
 }
-.usa-logo .usa-logo-text a {
-  font-family:"Source Sans Pro"; /*setting:headerlogo*/
+.usa-logo-text{
+display: table-cell;
+vertical-align: middle;
+padding-top: 2px;
 }
-html, button, .usa-button, #main-menu li a, #main-menu li button {
-  font-family:"Source Sans Pro"; /*setting:defont*/
+.usa-navbar{
+height: 40px;
+overflow: hidden;
 }
+}
+
+@media screen and (min-width: 951px){
+.usa-header-basic .usa-navbar{
+    width: 44%;
+    position: absolute;
+    z-index: 10000;
+    display: table;
+    height: 95px;
+    overflow: hidden;
+}
+.usa-header-basic .usa-logo .usa-logo-text a{
+    display: table-cell;
+    vertical-align: middle;
+    height: 95px;
+}
+.usa-header-basic .usa-logo{
+bottom: auto;
+}
+}
+

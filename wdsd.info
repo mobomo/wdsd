@@ -56,6 +56,7 @@ stylesheets[all][] = user.css
 stylesheets[all][] = assets/css/uswds.css
 
 ; our custom styles come in after the standards styles for cascading reasons
+stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/style.css
 
 ; we may need to remove jquery here and recommend jquery_update module to users
