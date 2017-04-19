@@ -1,5 +1,7 @@
 <div class="usa-footer-logo usa-width-one-half">
-  <img class="usa-footer-circle-124" src="<?php print (file_create_url($content['field_logo'][0]['#item']['uri']));?>" alt="<?php print ($content['field_logo'][0]['#item']['alt']);?>">
+  <?php if (!empty($content['field_logo'])) : ?>
+    <img class="usa-footer-circle-124" src="<?php print (file_create_url($content['field_logo'][0]['#item']['uri']));?>" alt="<?php print ($content['field_logo'][0]['#item']['alt']);?>">
+  <?php endif ;?>
   <h3 class="usa-footer-logo-heading">Name of Agency</h3>
 </div>
 
