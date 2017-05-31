@@ -60,7 +60,7 @@ overflow: hidden;
 }
 
 @media screen and (min-width: 951px){
-/*mariana fix for #NT-31*/
+/*fix for #NT-31*/
 .node-type-documentation .usa-header-basic .usa-navbar {
   width: 26%;
 }

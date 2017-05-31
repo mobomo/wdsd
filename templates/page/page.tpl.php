@@ -130,12 +130,6 @@ if (isset($variables['footer_secondary']) && theme_get_setting('footer') == 'big
                   <li class="js-search-button-container">
                     <button class="usa-header-search-button js-search-button"><?php print t('Search');?></button>
                   </li>
-                  <li>
-                    <a href="#">Secondary priority link</a>
-                  </li>
-                  <li>
-                    <a href="#">Easy to comprehend</a>
-                  </li>
                 </ul>
               </div>
             <?php endif ;?>

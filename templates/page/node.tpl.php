@@ -78,9 +78,8 @@
 ?>
 <?php if ($view_mode == 'teaser'): ?>
 
-
-
 <?php else: ?>
+
   <section class="usa-grid">
     <h1><?php print($title);?></h1>
     <?php
